@@ -73,6 +73,20 @@
             #binding-cells = <0>;
             bindings = <&kp LA(S)>, <&kp LA(D)>;
         };
+
+        td_asterisk_slash: td_asterisk_slash {
+            compatible = "zmk,behavior-tap-dance";
+            label = "Tap dance: Asker";
+            #binding-cells = <0>;
+            bindings = <&kp ASTERISK>, <&kp KP_SLASH>;
+        };
+
+        td_euro_dollar: td_euro_dollar {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_EURO_DOLLAR";
+            #binding-cells = <0>;
+            bindings = <&kp LS(NUMBER_1)>, <&kp LS(NUMBER_4)>;
+        };
     };
 
     keymap {
@@ -87,21 +101,12 @@
             >;
         };
 
-        nav_num {
+        nav_num_fn {
             bindings = <
-                   &kp LA(BACKSPACE)   &kp BACKSPACE  &kp UP     &kp DELETE     &kp LA(DELETE)        &kp N5      &kp N6           &kp N7       &kp N8    &kp N9
-                   &kp LA(LEFT_ARROW)  &kp LEFT       &kp DOWN   &kp RIGHT      &kp LA(RIGHT)         &kp N0      &kp N1           &kp N2       &kp N3    &kp N4
-&kp LG(BACKSPACE)  &kp LG(UP_ARROW)    &kp LG(LEFT)   &kp ENTER  &kp LG(RIGHT)  &kp LG(DOWN_ARROW)    &kp PERIOD  &kp PLUS         &kp MINUS    &kp STAR  &kp FSLH  &kp CARET
-                                                      &trans     &trans         &trans                &kp EQUAL   &kp RIGHT_SHIFT  &kp PERCENT
-            >;
-        };
-
-        sym_func {
-            bindings = <
-           &kp ESC        &kp LEFT_BRACE        &kp RIGHT_BRACE        &none             &none             &kp F1   &kp F2           &kp F3   &kp F4   &kp F5
-           &kp TAB        &kp LBKT              &kp RBKT               &kp ENTER         &kp BSLH          &kp F6   &kp F7           &kp F8   &kp F9   &kp F10
-&kp GRAVE  &kp LESS_THAN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &kp UNDERSCORE    &kp F11  &kp F12          &kp F13  &kp F14  &kp F15  &kp F16
-                                                &trans                 &trans            &trans            &none    &kp RIGHT_SHIFT  &none
+                 &td_parenthesis     &mt F7 N7        &mt F8 N8        &mt F9 N9        &mt F12 KP_MINUS    &kp N5      &kp N6           &kp N7       &kp N8    &kp N9
+                 &td_dot_comma       &mt F4 NUMBER_4  &mt F5 N5        &mt F6 NUMBER_6  &mt F11 PLUS        &kp N0      &kp N1           &kp N2       &kp N3    &kp N4
+&td_euro_dollar  &td_asterisk_slash  &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3  &mt F10 EQUAL       &kp PERIOD  &kp PLUS         &kp MINUS    &kp STAR  &kp FSLH  &kp CARET
+                                                      &kp NUMBER_0     &trans           &trans              &kp EQUAL   &kp RIGHT_SHIFT  &kp PERCENT
             >;
         };
     };
