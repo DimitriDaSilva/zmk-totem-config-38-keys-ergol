@@ -55,35 +55,35 @@
 
         td_equal_euro: td_equal_euro {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_EQUAL_EURO";
+            label = "td_equal_euro";
             #binding-cells = <0>;
             bindings = <&kp EQUAL>, <&kp LS(NUMBER_1)>;
         };
 
         td_dot_comma: td_dot_comma {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_DOT_COMMA";
+            label = "td_dot_comma";
             #binding-cells = <0>;
             bindings = <&kp KP_DOT>, <&kp DOT>;
         };
 
         td_parenthesis: td_parenthesis {
             compatible = "zmk,behavior-tap-dance";
-            label = "Tap Dance: opening parenthesis / closing parenthesis";
+            label = "td_parenthesis";
             #binding-cells = <0>;
             bindings = <&kp LA(S)>, <&kp LA(D)>;
         };
 
         td_asterisk_slash: td_asterisk_slash {
             compatible = "zmk,behavior-tap-dance";
-            label = "Tap dance: Asker";
+            label = "td_asterisk_slash";
             #binding-cells = <0>;
             bindings = <&kp ASTERISK>, <&kp KP_SLASH>;
         };
 
         td_euro_dollar: td_euro_dollar {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_EURO_DOLLAR";
+            label = "td_euro_dollar";
             #binding-cells = <0>;
             bindings = <&kp LS(NUMBER_1)>, <&kp LS(NUMBER_4)>;
         };
