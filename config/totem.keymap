@@ -105,7 +105,7 @@
         };
 
         combo_colon {
-            bindings = <&kp COLON>;
+            bindings = <&kp LS(N)>;
             key-positions = <12 17>;
         };
 
