@@ -130,12 +130,12 @@
         };
 
         combo_mouseless_grid {
-            bindings = <&kp LC(LS(SPACE))>;
+            bindings = <&kp F15>;
             key-positions = <11 18>;
         };
 
         combo_mouseless_free {
-            bindings = <&kp LC(SPACE)>;
+            bindings = <&kp F16>;
             key-positions = <10 19>;
         };
     };
