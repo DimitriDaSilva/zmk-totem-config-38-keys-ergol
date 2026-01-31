@@ -109,7 +109,7 @@
         morph_next_forward: morph_next_forward {
             compatible = "zmk,behavior-mod-morph";
             label = "MORPH_NEXT_FORWARD";
-            bindings = <&kp C_NEXT>, <&kp F14>;
+            bindings = <&kp C_NEXT>, <&kp F18>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
